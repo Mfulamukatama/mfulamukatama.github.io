@@ -1,19 +1,245 @@
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#153e35">
-    <title><!--SITE_TITLE--></title>
-    <meta name="description" content="__SITE_DESCRIPTION__">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn - Your Gateway to Simpler Computing</title>
+    <meta name="description" content="Download Dawn and experience a fresh way to manage your daily tasks. Simple, secure, and built for everyone. Get started today for free.">
+    <meta name="keywords" content="Dawn, application, download, free, productivity, task manager, software, Windows, user-friendly">
+    <meta name="author" content="Mfulamukatama">
+    <meta property="og:title" content="Dawn - Your Gateway to Simpler Computing">
+    <meta property="og:description" content="Download Dawn and experience a fresh way to manage your daily tasks. Simple, secure, and built for everyone.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://dave2k77.github.io/">
-    <meta property="og:url" content="https://dave2k77.github.io/">
-    <meta property="og:title" content="__SITE_TITLE__">
-    <meta property="og:description" content="__SITE_DESCRIPTION__">
-    <meta name="twitter:card" content="summary">
-    <link rel="icon" type="image/svg+xml" sizes="any" href="./favicon.svg?v=2">
-    <script type="module" src="/src/main.js"></script>
-  </head>
-  <body><div id="site"><!--SITE_CONTENT--></div><!--ARTICLE_DATA--></body>
+    <meta property="og:url" content="https://github.com/Mfulamukatama/Dawn">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Dawn+Release">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9fb;
+            color: #1a1a2e;
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #f0e6ff;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #ffffff;
+            color: #667eea;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e8e8f0;
+        }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2d2d44;
+            border-left: 6px solid #667eea;
+            padding-left: 15px;
+        }
+        .section h3 {
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+            color: #4a4a6a;
+        }
+        .section p, .section li {
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            color: #3d3d5c;
+        }
+        .section ul, .section ol {
+            padding-left: 25px;
+        }
+        .section li {
+            margin-bottom: 8px;
+        }
+        .badge {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+        }
+        .code-inline {
+            background: #f0f0f8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .callout {
+            background: #f3f0ff;
+            border-left: 5px solid #667eea;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #e8e8f0;
+            margin-top: 20px;
+        }
+        a {
+            color: #667eea;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .btn-primary {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🌅 Dawn - Brighter Days, Simpler Tasks</h1>
+        <p>Your everyday companion for getting things done effortlessly.</p>
+        <a href="https://github.com/Mfulamukatama/Dawn" class="btn-primary">⬇️ Download Dawn Now</a>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>👋 Welcome to Dawn</h2>
+            <p>Dawn is a brand-new application designed to make your digital life easier, cleaner, and more productive. It is built for people, not programmers. No confusing technical terms, no complicated setups, just a helpful tool that works the moment you open it.</p>
+            <p>Whether you are keeping track of personal projects, organizing daily routines, or simply want a more pleasant way to manage your files and reminders, Dawn brings a breath of fresh air to your computer. It&apos;s fast, lightweight, and ready to help you take control of your day.</p>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <p>Getting Dawn on your computer takes less than a minute. We keep everything straightforward, so you can focus on what matters. Just follow the single step below and you&apos;re ready.</p>
+            <div class="callout">
+                <strong>📥 Step 1 - Download:</strong> Visit this link to download the application. Just click the button, and your download will begin shortly. It&apos;s that simple.
+            </div>
+            <p style="text-align:center; margin-top:25px;">
+                <a href="https://github.com/Mfulamukatama/Dawn" class="btn-primary" style="background:#764ba2; color:#fff;">⬇️ Visit Download Link</a>
+            </p>
+            <p>No need to worry about file types or extraction tools. The download link above takes you directly to the official release page where everything is handled for you. Once you have the file, simply double-click it, and Dawn will start guiding you through the rest.</p>
+        </div>
+
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <p>Dawn is packed with useful features that feel intuitive from the very first click. Here is a peek at what you can expect:</p>
+            <ul>
+                <li><strong>🗂️ Simple Task Management</strong> - Create, organize, and complete tasks with zero clutter. Drag, drop, and done.</li>
+                <li><strong>🔔 Smart Reminders</strong> - Never miss an important deadline. Set a notification in plain English, and Dawn does the rest.</li>
+                <li><strong>📆 Clean Calendar View</strong> - See your whole month at a glance. A beautiful, minimal design that keeps you on track.</li>
+                <li><strong>🔒 Privacy First</strong> - Your data stays on your machine. No cloud, no tracking, no accounts required. Just you and your computer.</li>
+                <li><strong>⚡ Fast and Light</strong> - Dawn starts up instantly and won&apos;t slow down your PC. It uses minimal memory so you can keep working without interruption.</li>
+                <li><strong>🎨 Customizable Themes</strong> - Choose from several warm and cool color schemes to match your style. Make Dawn feel like home.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Installation & First Run</h2>
+            <h3>What happens after I download?</h3>
+            <p>When your download finishes, simply locate the file in your browser&apos;s download folder (usually called &quot;Downloads&quot;) and double-click it. Windows may ask for permission - just click &quot;Run&quot; or &quot;Yes.&quot; That&apos;s all there is to it.</p>
+            <h3>Is there a manual I need to follow?</h3>
+            <p>No manual needed. Dawn includes a handy built-in tutorial that pops up on your first launch. It will walk you through the main areas with friendly hints. You can skip it if you prefer to explore on your own.</p>
+            <h3>Do I need admin rights?</h3>
+            <p>In most cases, you can run Dawn without administrator privileges. If you encounter a permission prompt, simply accept it. It is a standard Windows security measure and perfectly safe.</p>
+        </div>
+
+        <div class="section">
+            <h2>🤔 Frequently Asked Questions</h2>
+            <h3>❓ Which Windows version is supported?</h3>
+            <p>Dawn supports Windows 10 and Windows 11. That covers the vast majority of modern PCs. If you have an older version, you may still be able to run it, but for the best experience we recommend updating your system.</p>
+            <h3>❓ Does Dawn require an internet connection?</h3>
+            <p>No. Once you have downloaded and installed Dawn, everything runs offline. You do not need to be connected to the internet to use it, which means your data stays private and safe.</p>
+            <h3>❓ Is Dawn really free?</h3>
+            <p>Yes! Dawn is completely free to use. No hidden fees, no premium upsell, no account creation. We believe great tools should be available to everyone.</p>
+        </div>
+
+        <div class="section">
+            <h2>📞 Need Help?</h2>
+            <p>We&apos;re here to help you get the most out of Dawn. If you run into any issues, have a question, or just want to say hello, you can reach out through the GitHub page linked below. We typically respond within a day.</p>
+            <p style="text-align:center; margin-top:20px;">
+                <a href="https://github.com/Mfulamukatama/Dawn" style="background:#1a1a2e; color:#fff; padding:14px 35px; border-radius:50px; text-decoration:none; font-weight:600; display:inline-block; box-shadow:0 4px 12px rgba(0,0,0,0.2);">🐙 Visit Official GitHub Page</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🌟 More Reasons to Love Dawn</h2>
+            <p>Beyond the basics, Dawn is designed with a human touch. We focus on the little details that make a big difference:</p>
+            <ul>
+                <li><strong>📖 Built-in Help Center</strong> - Press F1 anytime while using Dawn and get clear, friendly guidance.</li>
+                <li><strong>🖱️ Everything is Clickable</strong> - No cryptic keyboard shortcuts required. A gentle mouse click does it all.</li>
+                <li><strong>🗑️ Safe Undo</strong> - Made a mistake? Press Ctrl+Z to undo it. It&apos;s forgiving and flexible.</li>
+                <li><strong>📊 Visual Progress Bars</strong> - Watch your tasks progress with satisfying, smooth animations.</li>
+                <li><strong>🌙 Night Mode</strong> - Work late without eye strain. A single toggle switches to a soothing dark theme.</li>
+            </ul>
+            <p>Dawn isn&apos;t just another piece of software. It&apos;s a fresh start. A small sign that good software can be simple, friendly, and incredibly dependable. Download it now and feel the difference.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Dawn Project · Built with care by Mfulamukatama · All rights reserved.</p>
+            <p>Keywords: Dawn, production release, free app, task manager, productivity, Windows software, simple download</p>
+            <p><a href="https://github.com/Mfulamukatama/Dawn" style="color:#667eea;">Back to top</a></p>
+        </div>
+
+    </div>
+
+</body>
 </html>
